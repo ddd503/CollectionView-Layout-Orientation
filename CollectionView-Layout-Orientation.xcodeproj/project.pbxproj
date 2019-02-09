@@ -15,6 +15,7 @@
 		458BA866220F1E52001D6254 /* PhotosDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BA865220F1E52001D6254 /* PhotosDataStore.swift */; };
 		458BA869220F34A3001D6254 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BA867220F34A3001D6254 /* PhotoCell.swift */; };
 		458BA86A220F34A3001D6254 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458BA868220F34A3001D6254 /* PhotoCell.xib */; };
+		458BA86C220F395F001D6254 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BA86B220F395F001D6254 /* CustomFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		458BA865220F1E52001D6254 /* PhotosDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataStore.swift; sourceTree = "<group>"; };
 		458BA867220F34A3001D6254 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		458BA868220F34A3001D6254 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		458BA86B220F395F001D6254 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				458BA865220F1E52001D6254 /* PhotosDataStore.swift */,
 				458BA867220F34A3001D6254 /* PhotoCell.swift */,
 				458BA868220F34A3001D6254 /* PhotoCell.xib */,
+				458BA86B220F395F001D6254 /* CustomFlowLayout.swift */,
 			);
 			path = "CollectionView-Layout-Orientation";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				458BA869220F34A3001D6254 /* PhotoCell.swift in Sources */,
 				458BA866220F1E52001D6254 /* PhotosDataStore.swift in Sources */,
 				458BA856220EF604001D6254 /* ViewController.swift in Sources */,
+				458BA86C220F395F001D6254 /* CustomFlowLayout.swift in Sources */,
 				458BA854220EF604001D6254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
