@@ -62,18 +62,58 @@
 		458BA852220EF604001D6254 /* CollectionView-Layout-Orientation */ = {
 			isa = PBXGroup;
 			children = (
+				458BA871220F3A64001D6254 /* Utill */,
+				458BA870220F3A1F001D6254 /* Model */,
+				458BA86F220F3A1B001D6254 /* View */,
+				458BA86E220F3A18001D6254 /* Controller */,
+				458BA86D220F3A13001D6254 /* Others */,
+			);
+			path = "CollectionView-Layout-Orientation";
+			sourceTree = "<group>";
+		};
+		458BA86D220F3A13001D6254 /* Others */ = {
+			isa = PBXGroup;
+			children = (
 				458BA853220EF604001D6254 /* AppDelegate.swift */,
-				458BA855220EF604001D6254 /* ViewController.swift */,
-				458BA857220EF604001D6254 /* Main.storyboard */,
 				458BA85A220EF605001D6254 /* Assets.xcassets */,
 				458BA85C220EF605001D6254 /* LaunchScreen.storyboard */,
 				458BA85F220EF605001D6254 /* Info.plist */,
-				458BA865220F1E52001D6254 /* PhotosDataStore.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		458BA86E220F3A18001D6254 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				458BA855220EF604001D6254 /* ViewController.swift */,
+				458BA857220EF604001D6254 /* Main.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		458BA86F220F3A1B001D6254 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				458BA867220F34A3001D6254 /* PhotoCell.swift */,
 				458BA868220F34A3001D6254 /* PhotoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458BA870220F3A1F001D6254 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				458BA865220F1E52001D6254 /* PhotosDataStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		458BA871220F3A64001D6254 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
 				458BA86B220F395F001D6254 /* CustomFlowLayout.swift */,
 			);
-			path = "CollectionView-Layout-Orientation";
+			path = Utill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "CollectionView-Layout-Orientation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CollectionView-Layout-Orientation/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "CollectionView-Layout-Orientation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CollectionView-Layout-Orientation/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
