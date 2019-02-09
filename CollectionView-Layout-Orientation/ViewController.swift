@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import Photos
 
 final class ViewController: UIViewController {
 
+    var assets: PHFetchResult<PHAsset> = PHFetchResult()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        switch (PhotosDataStore.needsToRequestAccess(), PhotosDataStore.canAccess()) {
+        case (true, _):
+            PhotosDataStore.requestAuthorization { [weak self] (success) in
+                self?.assets = PhotosDataStore.requestAssets()
+            }
+        case (_, true):
+            assets = PhotosDataStore.requestAssets()
+        case (_, false):
+            // status is restricted or denied
+            fatalError("have no permission")
+        }
     }
 
-
 }
+
 
