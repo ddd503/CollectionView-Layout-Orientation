@@ -11,7 +11,20 @@ import Photos
 
 final class ViewController: UIViewController {
 
-    var assets: PHFetchResult<PHAsset> = PHFetchResult()
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.dataSource = self
+            collectionView.register(PhotoCell.nib(), forCellWithReuseIdentifier: PhotoCell.identifier)
+        }
+    }
+
+    var assets: PHFetchResult<PHAsset> = PHFetchResult() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +50,8 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.identifier, for: indexPath) as? PhotoCell else { fatalError() }
+        cell.setPhotoImage(asset: assets[indexPath.row])
         return cell
     }
 
