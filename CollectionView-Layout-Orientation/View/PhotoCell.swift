@@ -28,10 +28,17 @@ final class PhotoCell: UICollectionViewCell {
         options.version = .original
         return options
     }()
+    
     private func itemSize() -> CGSize {
-        let screenWidth = UIScreen.main.bounds.width
-        let itemLength = screenWidth / 3 - 1
+        let screenWidth = UIScreen.main.bounds.size.width
+        let itemLength = UIApplication.shared.statusBarOrientation.isLandscape ?
+            (screenWidth - CGFloat(hasSafeArea() ? 88 : 0)) / 8 - 1 : screenWidth / 4 - 1
         return CGSize(width: itemLength, height: itemLength)
+    }
+
+    private func hasSafeArea() -> Bool {
+        let insets = UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
+        return ((insets.top > 0) && (insets.bottom > 0)) || ((insets.left > 0) && (insets.right > 0))
     }
 
     func setPhotoImage(asset: PHAsset) {
